@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+.bg-video {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation-name: show;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    color: #fff;
+
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container .header-main {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 10rem;
+    text-transform: uppercase;
+    background: repeating-linear-gradient(white, white 2px, transparent 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .header-second {
+    font-family: 'Secular One', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: darkred;
+}
+
+.container .header-third {
+    font-family: 'Secular One', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: goldenrod;
+    order: -1;
+}
+
+.link svg {
+    width: 46px;
+    height: 46px;
+}
+
+.rey-color {
+    background: repeating-linear-gradient(goldenrod, goldenrod 2px, transparent 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lo-color {
+    background: repeating-linear-gradient(darkred, darkred 2px, transparent 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+path:hover {
+    fill: #fff;
+    transition: ease 1s;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 8px #fff,
+      0 0 15px darkred,
+      0 0 30px darkred,
+      0 0 40px darkred,
+      0 0 70px darkred,
+      0 0 100px darkred;
+    }
+    20%, 24%, 55% {
+    text-shadow:
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 11px darkred,
+      0 0 20px darkred,
+      0 0 30px darkred,
+      0 0 55px darkred,
+      0 0 80px darkred;
+  }
+}
+
+.lo-color:hover {
+    animation: flicker .5s infinite alternate;    
+}
+
+@keyframes pulsate {
+    /* максимальное свечение */
+    100% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 8px #fff,
+        0 0 15px goldenrod,
+        0 0 30px goldenrod,
+        0 0 40px goldenrod,
+        0 0 70px goldenrod,
+        0 0 100px goldenrod;
+    }
+    /* минимальное свечение */  
+    0% {
+      text-shadow:
+        0 0 1px #fff,
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 11px goldenrod,
+        0 0 20px goldenrod,
+        0 0 30px goldenrod,
+        0 0 55px goldenrod,
+        0 0 80px goldenrod;
+    }
+  }
+
+  .rey-color:hover {
+    animation: pulsate .01s infinite alternate;     
+  }
+
+  .header-second:hover {
+    color: #fff;
+    text-shadow:
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 11px darkred,
+      0 0 20px darkred,
+      0 0 30px darkred,
+      0 0 55px darkred,
+      0 0 80px darkred;
+      cursor: pointer;
+      transition: ease 1s;
+  }
+
+  .header-third:hover {
+    color: #fff;
+    text-shadow:
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 11px goldenrod,
+      0 0 20px goldenrod,
+      0 0 30px goldenrod,
+      0 0 55px goldenrod,
+      0 0 80px goldenrod;
+      cursor: pointer;
+            transition: ease 1s;
+  }
+
+  .header-second__color {
+      color: darkred;
+  }
+
+  .header-third__color {
+      color: goldenrod;
+  }
