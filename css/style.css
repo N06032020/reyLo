@@ -191,3 +191,12 @@ path:hover {
   .header-third__color {
       color: goldenrod;
   }
+
+  /* Media */ 
+
+  @media (max-width: 593px) {
+
+    .header-second {
+        text-align: center;
+    }
+  }
